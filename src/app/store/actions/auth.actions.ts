@@ -8,5 +8,15 @@ export enum AuthActionTypes {
 export class Auth implements Action {
   readonly type = AuthActionTypes.LoadAuths;
 }
+
+export class LoadAuths implements Action {
+  readonly type = AuthActionTypes.LoadAuths;
+}
  
-export type AuthActions = AuthActionTypes;
+export class SetAuths implements Action {
+  readonly type = AuthActionTypes.SetAuths;
+ 
+  constructor(public payload: string) {}
+}
+ 
+export type AuthActions = LoadAuths | SetAuths;
