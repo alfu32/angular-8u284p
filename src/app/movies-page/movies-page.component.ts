@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Movie } from '../movie';
+import {Store} from '@ngrx/store';
+import { Movie } from '../store/movie';
 
 @Component({
   selector: 'app-movies-page',
@@ -9,8 +10,14 @@ import { Movie } from '../movie';
 })
 export class MoviesPageComponent {
   movies$: Observable<{}> = this.store.select(state => state.movies);
-  constructor(private store: Store<{ movies: Movie[] >}) {}
-  ngOnInit() {
+
+  constructor(
+    private store: Store<{ movies: Movie[] }>
+  ) {
+
+  }
+  
+  ngOnInit(){
     this.store.dispatch({ type: '[Movies Page] Load Movies' });
   }
 }

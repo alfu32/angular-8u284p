@@ -19,6 +19,7 @@ import { MovieEffects } from './store/effects/movie.effects';
     BrowserModule,
     FormsModule,
     StoreModule.forRoot({ count: counterReducer }),
+    EffectsModule.forRoot([MovieEffects]),
   ],
   declarations: [ AppComponent, HelloComponent, MyCounterComponent, MoviesPageComponent ],
   bootstrap:    [ AppComponent ],
