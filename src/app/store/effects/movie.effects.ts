@@ -3,7 +3,7 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { EMPTY } from 'rxjs';
 import { map, mergeMap, catchError } from 'rxjs/operators';
 
-import { MoviesService } from '../../service/MoviesService';
+import { MoviesService } from '../../service/movies.service';
  
 @Injectable()
 export class MovieEffects {
