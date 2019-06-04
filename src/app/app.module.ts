@@ -5,9 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './store/reducers/counter.reducer';
+import { MyCounterComponent } from './my-counter/my-counter.component';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
+  imports:      [ 
+    BrowserModule,
+    FormsModule,
+    StoreModule.forRoot({ count: counterReducer }),
+  ],
+  declarations: [ AppComponent, HelloComponent, MyCounterComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -18,5 +18,5 @@ export class SetAuths implements Action {
  
   constructor(public payload: string) {}
 }
- 
+
 export type AuthActions = LoadAuths | SetAuths;
