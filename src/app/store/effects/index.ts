@@ -1,0 +1,1 @@
+export {MovieEffects} from './movie.effects';
